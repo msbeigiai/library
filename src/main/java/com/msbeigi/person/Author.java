@@ -3,7 +3,7 @@ package com.msbeigi.person;
 import java.util.UUID;
 
 public class Author extends Person {
-    private UUID id;
+    private final UUID id;
     public Author() {
         id = UUID.randomUUID();
     }

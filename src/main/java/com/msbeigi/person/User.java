@@ -21,7 +21,7 @@ public class User extends Person {
 
     public User(String name, int age, List<Book> books) {
         super(name, age);
-        id = UUID.randomUUID();
+        this.id = UUID.randomUUID();
         this.books = books;
     }
 
