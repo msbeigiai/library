@@ -14,8 +14,8 @@ public class Book {
         author = new Author();
     }
 
-    public Book(UUID id, String name, Author author) {
-        this.id = id;
+    public Book(String name, Author author) {
+        this.id = UUID.randomUUID();
         this.name = name;
         this.author = author;
     }
@@ -39,7 +39,8 @@ public class Book {
     @Override
     public String toString() {
         final StringBuffer sb = new StringBuffer("Book{");
-        sb.append("name='").append(name).append('\'');
+        sb.append("id=").append(id);
+        sb.append(", name='").append(name).append('\'');
         sb.append(", author=").append(author);
         sb.append('}');
         return sb.toString();
@@ -47,9 +48,5 @@ public class Book {
 
     public UUID getId() {
         return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
     }
 }

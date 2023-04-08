@@ -3,18 +3,15 @@ package com.msbeigi.person;
 import java.util.UUID;
 
 abstract class Person {
-    protected UUID id;
     protected String name;
     protected int age;
 
     public Person() {
-        id = new UUID(0, 0);
         name = "";
         age = 0;
     }
 
-    public Person(UUID id, String name, int age) {
-        this.id = id;
+    public Person(String name, int age) {
         this.name = name;
         this.age = age;
     }

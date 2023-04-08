@@ -14,6 +14,13 @@ public class Address extends Location {
         this.city = city;
     }
 
+    public Address(String street, String city) {
+        this.street = street;
+        this.city = city;
+        this.latitude = 0;
+        this.longitude = 0;
+    }
+
     public String getStreet() {
         return street;
     }
